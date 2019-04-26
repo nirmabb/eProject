@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.familyphotoeducationapp.ApplicationCrashHandler;
 import com.example.familyphotoeducationapp.R;
 import com.example.familyphotoeducationapp.lifecycle.ApplicationWrapper;
 
@@ -17,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
+        ApplicationCrashHandler.installHandler();
 
         long currentTime = System.currentTimeMillis();
         long elapsedTime = currentTime - ApplicationWrapper.startTime;
